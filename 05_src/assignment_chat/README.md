@@ -70,9 +70,8 @@ Personality Wrapper
     |
     v
 Gradio Chatbot UI
+```
 
-
-```markdown
 ## 2. Services Provided
 
 ### A. Country Information Service (`service1`)
@@ -86,9 +85,9 @@ This service extracts a country name from the user’s message and returns:
 
 It supports natural language variations such as:
 
-- “Tell me about Japan”
-- “What’s the capital of France?”
-- “population of Brazil please”
+- "Tell me about Japan"
+- "What’s the capital of France?"
+- "population of Brazil please"
 
 A small internal dataset provides the country information.
 
@@ -113,7 +112,7 @@ Included documents:
    ```python
    {"id": filename, "text": document_text}
 4. A lightweight reranker selects the best match using:
-   - filename hints (e.g., “summary”, “plot”, “character”)
+   - filename hints (e.g., "summary", "plot", "character")
    - fallback to the top embedding result
    - This two‑stage retrieval (vector search + reranking) significantly improves accuracy.
 
@@ -146,16 +145,16 @@ Examples:
 
 #### Keyword support
 
-- “multiply”, “times”
-- “subtract”, “minus”
+- "multiply", "times"
+- "subtract", "minus"
 
 #### Natural‑language normalization
 
 The system converts inputs like:
 
-- “subtract 3 from 10” → `subtract 10 3`
-- “multiply 7 and 8” → `multiply 7 8`
-- “is 42 even?” → `even 42`
+- "subtract 3 from 10" → `subtract 10 3`
+- "multiply 7 and 8" → `multiply 7 8`
+- "is 42 even?" → `even 42`
 
 This ensures the math engine receives clean, predictable input.
 
@@ -208,7 +207,7 @@ All user input is normalized to improve:
 
 All responses end with:
 
-> “Let me know what else you'd like to explore.”
+> "Let me know what else you'd like to explore."
 
 ### E. Guardrails
 
