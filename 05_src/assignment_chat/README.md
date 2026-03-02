@@ -48,7 +48,7 @@ The chatbot follows a multi‑stage pipeline:
 |           - Semantic Search (service2)               |
 |           - Math Engine (service3)                   |
 +------------------------------------------------------+
-
+```
 
 ### Data Flow
 
@@ -58,10 +58,10 @@ User Input
     v
 Intent Classifier  -----------------------------+
     |                                           |
-    | math → Math Service (service3)            |
-    | country → Country Service (service1)      |
-    | system override → Guardrail Response      |
-    | semantic → Semantic Search (service2)     |
+    | math -> Math Service (service3)            |
+    | country -> Country Service (service1)      |
+    | system override -> Guardrail Response      |
+    | semantic -> Semantic Search (service2)     |
     v                                           |
 Service Output  <-------------------------------+
     |
@@ -97,7 +97,7 @@ This service performs semantic search over `.txt` documents stored in the `data/
 
 Included documents:
 
-- `the_blue_cross.txt`
+- `the_blue_cross_short_story.txt`
 - `the_blue_cross_plot_summary.txt`
 - `the_blue_cross_main_characters.txt`
 - `Novartis_hits_acquisition_trail.txt`
@@ -131,17 +131,10 @@ This ensures consistent matching and routing.
 The math engine supports:
 
 - addition
-- subtraction (multi‑number)
-- multiplication (multi‑number)
+- subtraction (two‑number)
+- multiplication (two‑number)
 - division
 - even/odd checks
-
-#### Multi‑number operations
-
-Examples:
-
-- `multiply 2 3 4` → 24
-- `subtract 10 3 2 1` → 10 − (3 + 2 + 1) = 4
 
 #### Keyword support
 
@@ -152,9 +145,9 @@ Examples:
 
 The system converts inputs like:
 
-- "subtract 3 from 10" → `subtract 10 3`
-- "multiply 7 and 8" → `multiply 7 8`
-- "is 42 even?" → `even 42`
+- "subtract 3 from 10" -> `subtract 10 3`
+- "multiply 7 and 8" -> `multiply 7 8`
+- "is 42 even?" -> `even 42`
 
 This ensures the math engine receives clean, predictable input.
 
@@ -162,10 +155,10 @@ This ensures the math engine receives clean, predictable input.
 
 The intent classifier uses rule‑based logic:
 
-- **Math** → if message contains math keywords
-- **Country** → if message contains country‑related keywords
-- **System override** → if user attempts to bypass instructions
-- **Semantic search** → default fallback
+- **Math** -> if message contains math keywords
+- **Country** -> if message contains country‑related keywords
+- **System override** -> if user attempts to bypass instructions
+- **Semantic search** -> default fallback
 
 Normalization ensures punctuation and capitalization do not affect classification.
 
