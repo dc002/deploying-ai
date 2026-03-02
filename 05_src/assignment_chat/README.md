@@ -242,7 +242,7 @@ This matches typical chat application behavior.
 ## 7. Directory Structure
 
 ```text
-project-root/
+assignment_chat/
 ├── main.py
 ├── requirements.txt
 ├── services/
