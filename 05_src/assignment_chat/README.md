@@ -1,6 +1,6 @@
 # Multi‑Service Chatbot
 
-This project implements a conversational chatbot that routes user questions to different backend services depending on the intent of the query. The chatbot is built with **Gradio** and uses a **modular service architecture** to keep functionality clean, testable, and easy to extend.
+Thiis 42 even?s project implements a conversational chatbot that routes user questions to different backend services depending on the intent of the query. The chatbot is built with **Gradio** and uses a **modular service architecture** to keep functionality clean, testable, and easy to extend.
 
 The system supports:
 
@@ -50,7 +50,6 @@ The chatbot follows a multi‑stage pipeline:
 +------------------------------------------------------+
 
 
-```markdown
 ### Data Flow
 
 ```text
